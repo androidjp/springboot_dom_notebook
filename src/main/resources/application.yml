@@ -1,0 +1,4 @@
+config:
+  version: v1.0
+server:
+  port: 8383
