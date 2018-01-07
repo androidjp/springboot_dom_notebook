@@ -5,9 +5,9 @@ import com.jpuneng.springboot_dom_notebook.dto.UserDto;
 
 public interface NoteReadController {
 
-  public JsonRes getNoteList(int page , String userId);
+    public JsonRes getNoteList(int page, String userId);
 
-  public JsonRes getNoteDetail(String noteId);
+    public JsonRes getNoteDetail(String noteId);
 
-  public JsonRes getUserNoteList(int page , String userId);
+    public JsonRes getUserNoteList(int page, String userId);
 }

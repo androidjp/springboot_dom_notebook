@@ -1,6 +1,7 @@
 package com.jpuneng.springboot_dom_notebook.dto;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 public class NoteDto implements Serializable{
 

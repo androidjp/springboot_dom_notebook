@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 public interface UserController {
-  public JsonRes login(String userId , String password);
+    public JsonRes login(String userId, String password);
 
-  public JsonRes register(UserDto userDto);
+    public JsonRes register(UserDto userDto);
 }

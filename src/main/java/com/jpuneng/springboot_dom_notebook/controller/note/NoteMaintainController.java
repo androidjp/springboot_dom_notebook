@@ -5,10 +5,10 @@ import com.jpuneng.springboot_dom_notebook.dto.NoteDto;
 
 public interface NoteMaintainController {
 
-  public JsonRes updateNote(NoteDto noteDto);
+    public JsonRes updateNote(NoteDto noteDto);
 
-  public JsonRes deleteNote(String noteId);
+    public JsonRes deleteNote(String noteId);
 
-  public JsonRes likeNote(String noteId, String userId);
+    public JsonRes likeNote(String noteId, String userId);
 
 }
