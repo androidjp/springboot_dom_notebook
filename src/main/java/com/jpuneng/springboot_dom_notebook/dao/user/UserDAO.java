@@ -6,9 +6,13 @@ public interface UserDAO {
 
   public User findUserByUserId(String userId);
 
-  public User register(User user);
+  public User findUserByEmailAddress(String emailAddress);
 
-  public User login(String userId, String password);
+  public User findUserByPhoneNumber(String phoneNumber);
 
+  public void saveUser(User user);
 
+  public void updateUser(User user);
+
+  public void deleteUserByUserId(String userId);
 }

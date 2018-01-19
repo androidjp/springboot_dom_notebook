@@ -7,6 +7,10 @@ public class UserDto implements Serializable {
   private String user_id;
   private String psd;
 
+  private String nickName;
+  private String emailAddress;
+  private String phoneNumber;
+
   public String getUser_id() {
     return user_id;
   }
@@ -21,5 +25,29 @@ public class UserDto implements Serializable {
 
   public void setPsd(String psd) {
     this.psd = psd;
+  }
+
+  public String getNickName() {
+    return nickName;
+  }
+
+  public void setNickName(String nickName) {
+    this.nickName = nickName;
+  }
+
+  public String getEmailAddress() {
+    return emailAddress;
+  }
+
+  public void setEmailAddress(String emailAddress) {
+    this.emailAddress = emailAddress;
+  }
+
+  public String getPhoneNumber() {
+    return phoneNumber;
+  }
+
+  public void setPhoneNumber(String phoneNumber) {
+    this.phoneNumber = phoneNumber;
   }
 }
