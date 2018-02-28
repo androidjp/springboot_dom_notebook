@@ -1,5 +1,7 @@
 package com.jpuneng.springboot_dom_notebook.service.note;
 
-public interface NoteMaintainService {
+import com.jpuneng.springboot_dom_notebook.dto.NoteDto;
 
+public interface NoteMaintainService {
+    boolean updateNote(NoteDto noteDto) throws Exception;
 }

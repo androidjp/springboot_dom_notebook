@@ -1,5 +1,8 @@
 package com.jpuneng.springboot_dom_notebook.dao.note;
 
-public class NoteDao {
+import com.jpuneng.springboot_dom_notebook.po.Note;
 
+
+public interface NoteDao {
+    boolean saveNote(Note note) throws Exception;
 }

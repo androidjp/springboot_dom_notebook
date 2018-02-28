@@ -1,15 +1,27 @@
 package com.jpuneng.springboot_dom_notebook.po;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+
 import java.io.Serializable;
 import java.util.Date;
 
+@Document(collection = "NOTE")
 public class Note implements Serializable{
 
+  @Id
+  @Field("NOTE_ID")
   private String noteId;
+  @Field("TITLE")
   private String title;
+  @Field("CONTENT")
   private String content;
+  @Field("USER_ID")
   private String userId;
+  @Field("UPDATE_DATE")
   private Date updateTime;
+  @Field("CREATE_DATE")
   private Date createTime;
 
   public Note() {
