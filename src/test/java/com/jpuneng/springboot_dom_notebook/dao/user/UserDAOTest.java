@@ -1,6 +1,7 @@
 package com.jpuneng.springboot_dom_notebook.dao.user;
 
 import com.jpuneng.springboot_dom_notebook.po.User;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,12 +16,14 @@ public class UserDAOTest {
   private UserDAO userDAO;
 
   @Test
+  @Ignore
   public void findUserByUserId() throws Exception {
     User user = userDAO.findUserByUserId("user01");
     System.out.println(user.toString());
   }
 
   @Test
+  @Ignore
   public void saveUser() throws Exception {
     User user = new User();
 
@@ -32,6 +35,7 @@ public class UserDAOTest {
   }
 
   @Test
+  @Ignore
   public void updateUser() throws Exception {
     User user = new User();
 
@@ -43,6 +47,7 @@ public class UserDAOTest {
   }
 
   @Test
+  @Ignore
   public void deleteUserByUserId() throws Exception {
     userDAO.deleteUserByUserId("user01");
   }

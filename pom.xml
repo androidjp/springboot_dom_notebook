@@ -6,7 +6,8 @@
 	<groupId>com.jpuneng</groupId>
 	<artifactId>springboot_dom_notebook</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
+	<!--<packaging>jar</packaging>-->
 
 	<name>springboot_dom_notebook</name>
 	<description>Demo project for Spring Boot -- A Notebook Dom Server</description>
