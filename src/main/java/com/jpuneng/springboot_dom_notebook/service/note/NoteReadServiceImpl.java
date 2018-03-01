@@ -1,28 +1,33 @@
 package com.jpuneng.springboot_dom_notebook.service.note;
 
-import com.jpuneng.springboot_dom_notebook.dto.NoteDto;
+import com.jpuneng.springboot_dom_notebook.dao.note.NoteDao;
+import com.jpuneng.springboot_dom_notebook.po.Note;
+import com.jpuneng.springboot_dom_notebook.vo.NoteItemVO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class NoteReadServiceImpl implements NoteReadService {
 
-    @Override
-    public List<NoteDto> getNoteList(int page, String userId) throws Exception {
-        List<NoteDto> resList = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            NoteDto item = new NoteDto();
-            item.setId(UUID.randomUUID().toString());
-            item.setTitle("Title" + i);
-            item.setContent("Content" + i);
-            item.setAuthor("Author" + i);
+  @Autowired
+  NoteDao noteDao;
 
-            resList.add(item);
-        }
-        return resList;
+  @Override
+  public List<NoteItemVO> getNoteList(int page) throws Exception {
+    List<Note> noteList = noteDao.getNoteList(page);
+    List<NoteItemVO> noteItemVOList = new ArrayList<>();
+    for (Note note : noteList) {
+      NoteItemVO noteItemVO = new NoteItemVO();
+      noteItemVO.setAuthorId(note.getUserId());
+      noteItemVO.setNoteId(note.getNoteId());
+      noteItemVO.setTitle(note.getTitle());
+      noteItemVO.setUpdateTime(new SimpleDateFormat("yyyy-MM-dd HH:mm").format(note.getUpdateTime()));
+      noteItemVOList.add(noteItemVO);
     }
+    return noteItemVOList;
+  }
 }

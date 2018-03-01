@@ -9,7 +9,6 @@ public class NoteDto implements Serializable{
   private String author;
   private String title;
   private String content;
-  private String update_time;
 
   public String getId() {
     return id;
@@ -41,13 +40,5 @@ public class NoteDto implements Serializable{
 
   public void setContent(String content) {
     this.content = content;
-  }
-
-  public String getUpdate_time() {
-    return update_time;
-  }
-
-  public void setUpdate_time(String update_time) {
-    this.update_time = update_time;
   }
 }
