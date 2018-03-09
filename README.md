@@ -23,9 +23,10 @@
   2. `java -jar target/springboot_demo-0.0.1-SNAPSHOT.jar`
 * 打war包, 扔tomcat等跑。
   1. 当然是修改main方法所在的application类，让其继承`SpringBootInitializer`,并重写其`configure()`方法。
-  2. 执行 `mvn package`
-  3. 在target中拿到war包，直接扔到tomcat中就好。
- 
+  2. 【此方式不可靠】执行 `mvn package -Dspring.profiles.active=prod` , 即可完成prod配置的打包。
+  3. 【方式二：目前只查到这种方式】 就是先去`application.yml`中配置`spring.profiles.active=prod`，然后`mvn clean package`就好了。
+  4. 在target中拿到war包，直接扔到tomcat中就好。
+
  ## 已实现API
  * 登录
    * 接口: `/user/POST/login`

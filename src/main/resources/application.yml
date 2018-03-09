@@ -3,6 +3,8 @@ config:
 server:
   port: 8383
 spring:
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/notebookDB
+  profiles:
+    active: dev
+# 日志
+logging:
+  config: classpath:logback-${spring.profiles.active}.xml
